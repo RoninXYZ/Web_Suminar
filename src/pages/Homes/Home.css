@@ -1,0 +1,84 @@
+
+.home.page-content {
+  width: 100%;
+  padding: 50px 8% 70px;
+}
+
+.home-title {
+  font-size: clamp(50px, 9vw, 110px);
+  font-weight: 900;
+  letter-spacing: -4px;
+  line-height: 0.9;
+}
+
+.home-title span {
+  display: block;
+  color: #ef3030;
+}
+
+.home-contact {
+  margin-top: 60px;
+  padding: 25px;
+  border-left: 4px solid #ef3030;
+  background: #191a1e;
+}
+
+.home-contact h2,
+.home-location h2 {
+  color: #ef3030;
+  font-size: 20px;
+  letter-spacing: 3px;
+  margin-bottom: 15px;
+}
+
+.home-contact p {
+  color: #999;
+  margin-bottom: 8px;
+}
+
+.home-contact a {
+  color: white;
+  font-size: 23px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.home-contact a:hover {
+  color: #ef3030;
+}
+
+.home-location {
+  margin-top: 55px;
+  width: 100%;
+}
+
+.home-location > p {
+  color: #aaa;
+  margin-bottom: 18px;
+}
+
+.home-map {
+  width: 100%;
+  height: 420px;
+  border: 2px solid #ef3030;
+  border-radius: 5px;
+  z-index: 1;
+}
+
+.map-coordinate {
+  color: #ef3030 !important;
+  font-family: "Courier New", monospace;
+  font-size: 13px;
+  margin-top: 15px;
+  letter-spacing: 1px;
+}
+
+@media (max-width: 600px) {
+  .home.page-content {
+    padding: 35px 6% 50px;
+  }
+
+  .home-map {
+    height: 320px;
+  }
+}

@@ -1,0 +1,185 @@
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #101114;
+}
+
+.hero {
+  min-height: 100vh;
+  padding: 30px 8%;
+  background: radial-gradient(
+    circle at 80% 50%,
+    #292929,
+    #101114 65%
+  );
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.navbar p {
+  color: #999;
+  font-size: 11px;
+  letter-spacing: 2px;
+}
+
+/* DROPDOWN */
+
+.dropdown {
+  position: relative;
+  width: 220px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  cursor: pointer;
+  padding: 8px 0 15px;
+}
+
+.brand h2 {
+  font-size: 22px;
+  letter-spacing: 3px;
+}
+
+.brand h2 span {
+  color: #ef3030;
+  font-size: 12px;
+}
+
+.menu-icon {
+  font-size: 20px;
+  color: #ef3030;
+}
+
+/* HIDDEN MENU */
+
+.dropdown-list {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 220px;
+  background: #202020;
+  border: 1px solid #444;
+  z-index: 10;
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+
+  transition: all 0.3s ease;
+}
+
+/* MOUSE HOVER */
+
+.dropdown:hover .dropdown-list {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* MENU ITEMS */
+
+.dropdown-item {
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-bottom: 1px solid #383838;
+  color: #ddd;
+  font-size: 12px;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+
+.dropdown-item small {
+  color: #ef3030;
+}
+
+.dropdown-item span {
+  margin-left: auto;
+}
+
+.dropdown-item:hover {
+  background: #ef3030;
+  color: white;
+}
+
+/* MAIN CONTENT */
+
+.content {
+  margin: 70px 0;
+}
+
+.eyebrow {
+  color: #ef3030;
+  letter-spacing: 6px;
+  font-size: 12px;
+  margin-bottom: 25px;
+}
+
+h1 {
+  font-size: clamp(48px, 10vw, 120px);
+  font-weight: 900;
+  letter-spacing: -5px;
+  line-height: 0.95;
+}
+
+h1 span {
+  display: block;
+  color: #ef3030;
+  font-size: 0.75em;
+}
+
+.line {
+  width: 100px;
+  height: 5px;
+  background: #ef3030;
+  margin: 35px 0;
+}
+
+.content h2 {
+  font-size: clamp(30px, 5vw, 55px);
+}
+
+.description {
+  color: #999;
+  margin-top: 20px;
+  letter-spacing: 3px;
+  font-size: 12px;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #333;
+  padding-top: 20px;
+  color: #999;
+  font-size: 11px;
+  letter-spacing: 2px;
+}
+
+footer p:last-child {
+  color: #ef3030;
+}
+
+@media (max-width: 600px) {
+  .hero {
+    padding: 25px 6%;
+  }
+}
