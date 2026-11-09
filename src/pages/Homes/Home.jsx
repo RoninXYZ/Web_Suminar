@@ -24,7 +24,10 @@ const customIcon = L.icon({
   shadowSize: [41, 41]
 });
 
+// Marker positions
 const position = [-7.3657, 108.53397];
+
+const secondPosition = [-7.3690382, 108.5351267];
 
 function Home() {
   return (
@@ -68,6 +71,7 @@ function Home() {
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           />
 
+          {/* MARKER 1 */}
           <Marker
             position={position}
             icon={customIcon}
@@ -81,10 +85,26 @@ function Home() {
             </Popup>
           </Marker>
 
+          {/* MARKER 2 */}
+          <Marker
+            position={secondPosition}
+            icon={customIcon}
+          >
+            <Popup>
+              <strong>LOKASI KEDUA</strong>
+              <br />
+              LAT: -7.3690382
+              <br />
+              LONG: 108.5351267
+            </Popup>
+          </Marker>
+
         </MapContainer>
 
         <p className="map-coordinate">
-          LAT: -7.365777 | LONG: 108.53397
+          MARKER 1: -7.3657 | 108.53397
+          <br />
+          MARKER 2: -7.3690382 | 108.5351267
         </p>
 
       </div>
